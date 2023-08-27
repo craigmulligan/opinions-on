@@ -11,7 +11,9 @@ title: Opinions on
         {{ post.title }}
       </a>
     </h2>
-    <img src="assets/images/{{ post.image }}">
+
+    {% assign image_path = "/assets/images/" | append : post.image %}
+    <img src="{{ image_path | resize: "50x50>" }}" alt="" data-echo="{{ image_path | resize: "500x500" }}">
     <p>rating: {{post.rating}}/10<p/>
     <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
     {{ post.content }}
