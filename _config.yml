@@ -41,3 +41,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  - scope:
+      path: "assets/css"
+    values:
+      css: true

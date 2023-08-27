@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "run server",
+            "type": "shell",
+            "command": "source $HOME/.bash_profile && /bin/bash -c 'bundle exec jekyll serve --livereload'",
+            "presentation": {"echo": true, "reveal": "always", "focus": false, "panel": "shared", "showReuseMessage": false, "clear": true},
+        },
+        {
+            "label": "open browser",
+            "type": "shell",
+            "command": "open http://localhost:4000",
+            "presentation": {"echo": true, "reveal": "always", "focus": false, "panel": "shared", "showReuseMessage": false, "clear": true},
+        },
+    ]
+}

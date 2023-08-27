@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-  </head>
+    {% assign image_files = site.static_files | where: "css", true %}
+    {% for myimage in image_files %}
+      <link rel="stylesheet" href="{{ myimage.path }}?{{ myimage.modified_time | date_to_rfc822 | uri_escape}}">
+    {% endfor %}
+    </head>
   <body>
     {{ content }}
   </body>
